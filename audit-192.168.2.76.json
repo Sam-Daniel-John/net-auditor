@@ -1,0 +1,32 @@
+{
+    "audit": {
+        "target": "192.168.2.76",
+        "timestamp": "2026-09-20 22:37:01"
+    },
+    "connectivity": {
+        "reachable": true,
+        "status": "PASS"
+    },
+    "reverse_dns": {
+        "available": true,
+        "status": "PASS"
+    },
+    "service_discovery": {
+        "method": "nmap -sV --top-ports 20",
+        "raw_output": "Starting Nmap 7.95 ( https://nmap.org ) at 2026-09-20 22:34 CEST\nNmap scan report for kali (192.168.2.76)\nHost is up (0.0000050s latency).\n\nPORT     STATE  SERVICE       VERSION\n21/tcp   closed ftp\n22/tcp   closed ssh\n23/tcp   closed telnet\n25/tcp   closed smtp\n53/tcp   closed domain\n80/tcp   closed http\n110/tcp  closed pop3\n111/tcp  closed rpcbind\n135/tcp  closed msrpc\n139/tcp  closed netbios-ssn\n143/tcp  closed imap\n443/tcp  closed https\n445/tcp  closed microsoft-ds\n993/tcp  closed imaps\n995/tcp  closed pop3s\n1723/tcp closed pptp\n3306/tcp closed mysql\n3389/tcp closed ms-wbt-server\n5900/tcp closed vnc\n8080/tcp closed http-proxy\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 0.32 seconds\n"
+    },
+    "open_ports": [],
+    "ssh": {
+        "exposed": false,
+        "status": "PASS"
+    },
+    "firewall": {
+        "status": "nftables installed but no rules detected",
+        "assessment": "WARN"
+    },
+    "recommendations": [
+        "[PASS] No exposed TCP services detected. Continue minimizing unnecessary services.",
+        "[PASS] SSH is not exposed. No SSH hardening required.",
+        "[HIGH] No active host firewall rules detected. Configure a host-based firewall."
+    ]
+}
